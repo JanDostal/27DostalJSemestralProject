@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"cz.tul.fm.alg1.dostal","l":"ChristmasApplesDrawing"},{"p":"cz.tul.fm.alg1.dostal","l":"MaxScalarProductCalculation"},{"p":"cz.tul.fm.alg1.dostal","l":"UI"}];updateSearchResults();
