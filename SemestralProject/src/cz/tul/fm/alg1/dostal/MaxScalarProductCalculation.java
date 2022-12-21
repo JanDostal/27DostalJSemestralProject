@@ -11,7 +11,7 @@ public class MaxScalarProductCalculation
     private static double[][] vectorsSet;
     
     //out variables
-    private static double vectorsSetMaxScalarProduct = -Double.MAX_VALUE;
+    private static double vectorsSetMaxScalarProduct;
     private static double[][] twoFoundVectors = new double[2][];
     
     //testing main
@@ -167,7 +167,13 @@ public class MaxScalarProductCalculation
      */
     private static void emptyOutput () 
     {
-        vectorsSetMaxScalarProduct = -Double.MAX_VALUE;
+        /*
+          nastaveno na minus nekonecno z duvodu, aby se spravne vyhledala
+          dvojice vektoru majici maximalni skalarni soucin za situace, ze veskere 
+          vypocitane skalarni souciny pro kazdou unikatni dvojici radku ze 
+          sady vektoru budou rovny minus nekonecnu
+        */
+        vectorsSetMaxScalarProduct = Double.NEGATIVE_INFINITY;
         
         twoFoundVectors[0] = null;
         twoFoundVectors[1] = null;
