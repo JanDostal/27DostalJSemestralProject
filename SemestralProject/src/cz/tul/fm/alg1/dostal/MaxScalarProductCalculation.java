@@ -163,7 +163,7 @@ public class MaxScalarProductCalculation
     }
     
     /**
-     * Resets the output variables to default values when a program's new task starts
+     * Resets the output variables to default values when a program's new task starts.
      */
     private static void emptyOutput () 
     {
@@ -177,7 +177,7 @@ public class MaxScalarProductCalculation
      * Iterates over nested loop within outer loop to gradually calculate a scalar
      * product for each possible unique combination of two rows from the vectors 
      * set and compare it
-     * with the existing max scalar product
+     * with the existing max scalar product.
      */
     private static void searchVectorsSet () 
     {
@@ -211,7 +211,7 @@ public class MaxScalarProductCalculation
      * From given first and second vector indexes iterates over chosen 
      * vectors columns to gradually make sum of products (scalar product), which 
      * are calculated as multiplication of first and second vector elements in 
-     * each column
+     * each column.
      * @param firstChosenVectorIndex represents a row index of a first chosen vector 
      * from the vectors set
      * @param secondChosenVectorIndex represents a row index of a second chosen 
@@ -236,7 +236,7 @@ public class MaxScalarProductCalculation
     }
     
     /**
-     * Compares the given scalar product with the max scalar product
+     * Compares the given scalar product with the max scalar product.
      * @param chosenVectorsScalarProduct represents a scalar product of two chosen vectors
      * @return logical one if the given scalar product is greater than or equal to 
      * the max scalar product, otherwise returns logical zero
@@ -248,7 +248,7 @@ public class MaxScalarProductCalculation
     
     /**
      * Sets the output variable of max scalar product as given scalar product of two 
-     * chosen vectors
+     * chosen vectors.
      * @param chosenVectorsScalarProduct represents a scalar product of two chosen vectors
      */
     private static void setNewMaxScalarProduct (double chosenVectorsScalarProduct) 
@@ -257,7 +257,7 @@ public class MaxScalarProductCalculation
     }
     
     /**
-     * Sets the output variable of two found vectors as two chosen vectors
+     * Sets the output variable of two found vectors as two chosen vectors.
      * @param firstChosenVectorIndex represents a row index of a first chosen vector 
      * from the vectors set
      * @param secondChosenVectorIndex represents a row index of a second chosen 
