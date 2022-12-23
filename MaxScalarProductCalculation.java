@@ -169,9 +169,8 @@ public class MaxScalarProductCalculation
     {
         /*
           nastaveno na minus nekonecno z duvodu, aby se spravne vyhledala
-          dvojice vektoru majici maximalni skalarni soucin za situace, ze veskere 
-          vypocitane skalarni souciny pro kazdou unikatni dvojici radku ze 
-          sady vektoru budou rovny minus nekonecnu
+          dvojice vektoru a maximalni skalarni soucin za situace, ze
+          maximalni skalarni soucin je zaporne realne cislo
         */
         vectorsSetMaxScalarProduct = Double.NEGATIVE_INFINITY;
         
@@ -183,9 +182,11 @@ public class MaxScalarProductCalculation
      * Iterates over nested loop within outer loop to gradually calculate a scalar
      * product for each possible unique combination of two rows from the vectors 
      * set and compare it
-     * with the existing max scalar product.
+     * with the existing max scalar product to decide if calculated scalar product
+     * will be the new maximum scalar product.
+     * @throws Exception if final maximum scalar product is equal to infinity
      */
-    private static void searchVectorsSet () 
+    private static void searchVectorsSet () throws Exception 
     {
         double chosenVectorsScalarProduct;
         boolean isScalarProductEqualOrGreaterThanMaxScalarProduct;
@@ -210,7 +211,13 @@ public class MaxScalarProductCalculation
                     setNewTwoFoundVectors(firstChosenVectorIndex, secondChosenVectorIndex);
                 }
             }
-        }   
+        }
+        
+        if (vectorsSetMaxScalarProduct == Double.POSITIVE_INFINITY ||
+            vectorsSetMaxScalarProduct == Double.NEGATIVE_INFINITY) 
+        {
+            throw new Exception("Vypocitany maximalni skalarni soucin nemuze byt nekonecno");
+        }
     }
     
     /**

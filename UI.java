@@ -122,16 +122,16 @@ public final class UI
             
             for (int elementIndex = 0; elementIndex < foundVector.length - 1; elementIndex++) 
             {
-                System.out.printf("%.10e  ", foundVector[elementIndex]);
+                System.out.printf("%.2e  ", foundVector[elementIndex]);
             }
             
-            System.out.printf("%.10e)%n", foundVector[foundVector.length - 1]);
+            System.out.printf("%.2e)%n", foundVector[foundVector.length - 1]);
         }        
     }
     
     //pouzije se v programu pro hledani maximalniho skalarniho soucinu
     public static void displayFoundMaxScalarProduct (double maxScalarProduct) 
     {
-        System.out.printf("Skalarni soucin techto vektoru %.10e%n", maxScalarProduct);
+        System.out.printf("Skalarni soucin techto vektoru %e%n", maxScalarProduct);
     }
 }
